@@ -41,12 +41,21 @@ var dictionary = {
         `div.Keyboard-module_row__ilOKU:nth-child(${dictionary[char][0]}) > button:nth-child(${dictionary[char][1]})`
     ).click();
   }
-  
+  // ORIGINAL version (👇)
   // enter the three words
+  // words.forEach((word) => {
+  //   for (let i = 0; i < word.length; i++) {
+  //     write(`${word[i]}`);
+  //   }
+  //   write("enter");
+  // });
+
+  // maybe this version (👇) will work ❓
   words.forEach((word) => {
-    for (let i = 0; i < word.length; i++) {
-      write(`${word[i]}`);
-    }
-    write("enter");
+    setTimeout(function() {
+      for (let i = 0; i < word.length; i++) {
+        write(`${word[i]}`);
+      }
+      write("enter");
+    }, 1000);
   });
-  
