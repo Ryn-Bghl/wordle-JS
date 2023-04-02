@@ -1,3 +1,5 @@
+// only use in https://wordlegame.org/
+
 // all the letter and their coordinates
 var dictionary = {
   q: [1, 1],
@@ -33,36 +35,17 @@ var dictionary = {
 // the starting words
 const words = ["ratio", "mends", "lucky"];
 
-//Wordle Game version 
-function wordleGame(){
-  //the function that write the letter (and click on enter or delete)
-  function write(char) {
-    document.querySelector(
-      `div.Game-keyboard-row:nth-child(${dictionary[char][0]}) > div:nth-child(${dictionary[char][1]})`
-    ).click();
+//the function that write the letter (and click on enter or delete)
+function write(char) {
+  document.querySelector(
+    `div.Game-keyboard-row:nth-child(${dictionary[char][0]}) > div:nth-child(${dictionary[char][1]})`
+  ).click();
+}
+
+// enter the three words
+words.forEach((word) => {
+  for (let i = 0; i < word.length; i++) {
+    write(`${word[i]}`);
   }
-
-  // enter the three words
-  words.forEach((word) => {
-    for (let i = 0; i < word.length; i++) {
-      write(`${word[i]}`);
-    }
-    write("enter");
-  });
-};
-
-//New York Times version
-function nytimes(){
-  //the function that write the letter (and click on enter or delete)
-  function write(char) {
-    document.querySelector(`div.Keyboard-module_row__ilOKU:nth-child(${dictionary[char][0]}) > button:nth-child(${dictionary[char][1]})`).click()
-  }
-
-  // enter the three words
-  words.forEach((word) => {
-    for (let i = 0; i < word.length; i++) {
-      write(`${word[i]}`);
-    }
-    write("enter");
-  });
-};
+  write("enter");
+});
