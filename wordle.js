@@ -1,3 +1,6 @@
+// only use in https://wordlegame.org/
+
+// all the letter and their coordinates
 var dictionary = {
   q: [1, 1],
   w: [1, 2],
@@ -29,14 +32,17 @@ var dictionary = {
   delete: [3, 9],
 };
 
+// the starting words
 const words = ["ratio", "mends", "lucky"];
 
+//the function that write the letter (and click on enter or delete)
 function write(char) {
   document.querySelector(
     `div.Game-keyboard-row:nth-child(${dictionary[char][0]}) > div:nth-child(${dictionary[char][1]})`
   ).click();
 }
 
+// enter the three words
 words.forEach((word) => {
   for (let i = 0; i < word.length; i++) {
     write(`${word[i]}`);
