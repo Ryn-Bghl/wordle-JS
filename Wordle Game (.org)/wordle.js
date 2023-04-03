@@ -14,12 +14,14 @@ function write(char) {
 }
 
 // enter the three words
-words.forEach((word) => {
-  for (let i = 0; i < word.length; i++) {
-    write(`${word[i]}`);
-  }
-  write("enter");
-});
+function start() {
+  words.forEach((word) => {
+    for (let i = 0; i < word.length; i++) {
+      write(`${word[i]}`);
+    }
+    write("enter");
+  });
+}
 
 var btnDiv = document.querySelector(".buttons");
 
