@@ -21,12 +21,14 @@ words.forEach((word) => {
   write("enter");
 });
 
-// Create a new <p> element
-var paragraph = document.createElement("p");
+var btnDiv = document.querySelector(".buttons");
 
-// Set the content of the <p> element
-var text = document.createTextNode("This is a paragraph.");
-paragraph.appendChild(text);
+// Create a new <button> element
+var btn = document.createElement("button");
 
-// Add the <p> element to the document
-document.body.appendChild(paragraph);
+// Set the content of the <button> element
+var content = document.createTextNode("🐱‍💻");
+btn.appendChild(content);
+
+// Add the <button> element to the document
+btnDiv.appendChild(btn); 
