@@ -27,18 +27,9 @@ var btnDiv = document.querySelector(".buttons");
 
 // Create a new <button> element
 var btn = document.createElement("button");
-btn.style.scale
-
-//set the :hover properties and their color
-btn.addEventListener("mouseover", () => {
-  btn.style.color = "rgb(103, 180, 103)";
-  btn.style.backgroundColor = "rgb(30, 49, 24)";
-});
-
-btn.addEventListener("mouseout", () => {
-  btn.style.color = "rgb(182, 175, 166)";
-  btn.style.backgroundColor = "rgb(33, 36, 37)";
-});
+btn.setAttribute('class', "button mini_modal_link");
+btn.setAttribute('id', "#modal_settings");
+btn.setAttribute('type', 'button');
 
 // Set the content of the <button> element
 var content = document.createTextNode("🐱‍💻");
