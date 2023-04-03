@@ -23,6 +23,13 @@ function start() {
   });
 }
 
+function Bltr(str){
+  ltr_lst = ['a']
+  str.forEach(ltr => {
+    
+  });
+};
+
 var btnDiv = document.querySelector(".buttons");
 
 // Create a new <button> element
