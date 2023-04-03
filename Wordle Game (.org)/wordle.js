@@ -98,7 +98,6 @@ function Bltr(str) {
   };
   str.split("").forEach((ltr) => {
     delete ltr_lst[getKeyByValue(ltr_lst, ltr)];
-    console.log(ltr_lst);
   });
   console.log(Object.values(ltr_lst).join(""));
 }
