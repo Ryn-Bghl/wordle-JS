@@ -27,6 +27,8 @@ var btnDiv = document.querySelector(".buttons");
 
 // Create a new <button> element
 var btn = document.createElement("button");
+
+// set the needed atributes
 btn.setAttribute('class', "button mini_modal_link");
 btn.setAttribute('type', 'button');
 btn.setAttribute('onclick', 'start()');
