@@ -29,8 +29,15 @@ var btnDiv = document.querySelector(".buttons");
 var btn = document.createElement("button");
 btn.style.scale
 
+//set the :hover properties and their color
 btn.addEventListener("mouseover", () => {
-  btn.style.backgroundColor = "green";
+  btn.style.color = "rgb(103, 180, 103)";
+  btn.style.backgroundColor = "rgb(30, 49, 24)";
+});
+
+btn.addEventListener("mouseout", () => {
+  btn.style.color = "rgb(182, 175, 166)";
+  btn.style.backgroundColor = "rgb(33, 36, 37)";
 });
 
 // Set the content of the <button> element
