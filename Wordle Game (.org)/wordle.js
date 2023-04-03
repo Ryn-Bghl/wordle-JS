@@ -27,6 +27,11 @@ var btnDiv = document.querySelector(".buttons");
 
 // Create a new <button> element
 var btn = document.createElement("button");
+btn.style.scale
+
+btn.addEventListener("mouseover", () => {
+  btn.style.backgroundColor = "green";
+});
 
 // Set the content of the <button> element
 var content = document.createTextNode("🐱‍💻");
