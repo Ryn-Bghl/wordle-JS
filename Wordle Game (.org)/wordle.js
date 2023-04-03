@@ -28,7 +28,6 @@ var btnDiv = document.querySelector(".buttons");
 // Create a new <button> element
 var btn = document.createElement("button");
 btn.setAttribute('class', "button mini_modal_link");
-btn.setAttribute('id', "#modal_settings");
 btn.setAttribute('type', 'button');
 
 // Set the content of the <button> element
