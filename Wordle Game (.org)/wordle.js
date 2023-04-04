@@ -1,7 +1,7 @@
 // only use in https://wordlegame.org/
 
-// all the letter and their coordinates
-var dictionary = {
+// all the letter and their coordinates of the keyboard
+var keyboard = {
   q: [1, 1],
   w: [1, 2],
   e: [1, 3],
@@ -43,7 +43,7 @@ var words = ["glent", "brick", "jumpy", "vozhd", "waqfs"];
 function write(char) {
   document
     .querySelector(
-      `div.Game-keyboard-row:nth-child(${dictionary[char][0]}) > div:nth-child(${dictionary[char][1]})`
+      `div.Game-keyboard-row:nth-child(${keyboard[char][0]}) > div:nth-child(${keyboard[char][1]})`
     )
     .click();
 }
@@ -123,6 +123,7 @@ btnDiv.appendChild(btn);
 
 //-------------------------------------------------------
 
+
 function toggle(){
   if(btn2.textContent == "❌"){
     btn2.textContent = "✔"
@@ -149,3 +150,16 @@ btn2.appendChild(content);
 btnDiv.appendChild(btn2);
 
 //-------------------------------------------------------
+
+// get the state of the letter:-> document.querySelector("div.Row:nth-child(2) > div:nth-child(1)").attributes["class"].nodeValue.split(" ")[1]
+/*
+function write(char) {
+  document
+    .querySelector(
+      `div.Game-keyboard-row:nth-child(${keyboard[char][0]}) > div:nth-child(${keyboard[char][1]})`
+    )
+    .click();
+
+    console.log(document.querySelector("div.Row:nth-child(2) > div:nth-child(1)").attributes["class"].nodeValue.split(" ")[1])
+}
+*/
