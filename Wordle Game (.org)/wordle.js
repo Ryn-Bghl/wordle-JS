@@ -152,21 +152,21 @@ btnDiv.appendChild(btn2);
 //-------------------------------------------------------
 
 // get the state of the letter:-> document.querySelector("div.Row:nth-child(2) > div:nth-child(1)").attributes["class"].nodeValue.split(" ")[1]
-/*
 
-var x = [], y = [];
-
-for (let i = 1; i <= 5; i++) {
-  x.push(i.toString())
+function Cword() {
+  var cltr = [], bltr = [];
+  for (var i = 1; i <= 6; i++) { // number of line
+    for (var j = 1; j <= 5; j++) { // number of column 
+      var state = document.querySelector(`div.Row:nth-child(${i}) > div:nth-child(${j})`).attributes["class"].nodeValue.split(" ")[1]
+      var letter = document.querySelector(`div.Row:nth-child(${i}) > div:nth-child(${j})`).childNodes[0].textContent 
+      
+      if(state == "letter-correct" || state == "letter-elsewhere"){
+        cltr.push(letter)
+      } else if(state == "letter-absent"){
+        bltr.push(letter)
+      }else{
+        console.error('invalid state')
+      }
+    }
+  }
 }
-for (let i = 1; i <= 6; i++) {
-  y.push(i.toString())
-}
-
-console.log(x, y)
-
-function State() {
-  
-  console.log(document.querySelector(`div.Row:nth-child(coor) > div:nth-child(coor)`).attributes["class"].nodeValue.split(" ")[1])
-}
-*/
