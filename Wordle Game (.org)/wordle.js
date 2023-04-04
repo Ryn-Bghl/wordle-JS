@@ -123,13 +123,29 @@ btnDiv.appendChild(btn);
 
 //-------------------------------------------------------
 
-// Create a new <input> element
-var inpt = document.createElement("input");
+function toggle(){
+  if(btn2.textContent == "❌"){
+    btn2.textContent = "✔"
+  }else if(btn2.textContent == "✔"){
+    btn2.textContent == "❌"
+  }else{
+    btn2.textContent == "❓❓❓"
+  }
+};
+
+// Create a new <button> element
+var btn2 = document.createElement("button");
 
 // set the needed atributes
+btn2.setAttribute("class", "button mini_modal_link");
+btn2.setAttribute("type", "button");
+btn2.setAttribute("onclick", "toggle()");
 
-// Set the content of the <input> element
+// Set the content of the <button> element
+var content = document.createTextNode("❌");
+btn2.appendChild(content);
 
-// Add the <input> element to the document
+// Add the <button> element to the document
+btnDiv.appendChild(btn2);
 
 //-------------------------------------------------------
