@@ -127,9 +127,9 @@ function toggle(){
   if(btn2.textContent == "❌"){
     btn2.textContent = "✔"
   }else if(btn2.textContent == "✔"){
-    btn2.textContent == "❌"
+    btn2.textContent = "❌"
   }else{
-    btn2.textContent == "❓❓❓"
+    btn2.textContent = "❓❓❓"
   }
 };
 
