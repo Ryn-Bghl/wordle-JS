@@ -112,7 +112,7 @@ var btn = document.createElement("button");
 // set the needed atributes
 btn.setAttribute("class", "button mini_modal_link");
 btn.setAttribute("type", "button");
-btn.setAttribute("onclick", "start()");
+btn.setAttribute("onclick", "Cword()");
 
 // Set the content of the <button> element
 var content = document.createTextNode("🐱‍💻");
@@ -152,8 +152,11 @@ btnDiv.appendChild(btn2);
 //-------------------------------------------------------
 
 // get the state of the letter:-> document.querySelector("div.Row:nth-child(2) > div:nth-child(1)").attributes["class"].nodeValue.split(" ")[1]
+// https://lotsofwords.com/o+p+s+w/-a-b-c-d-e-f-g-h-i-j-k-l-n-q-r-t-u-v-w-x-y-z/5-letters/dictionary/common-words
+
 
 function Cword() {
+  start()
   var cltr = [], bltr = [];
   for (var i = 1; i <= 6; i++) { // number of line
     for (var j = 1; j <= 5; j++) { // number of column 
@@ -169,4 +172,11 @@ function Cword() {
       }
     }
   }
+  setTimeout(() => {
+    if(document.querySelector("button.button:nth-child(5)").textContent == "✔")
+      window.open(`https://lotsofwords.com/${cltr.join("+")}/-${bltr.join("-")}/5-letters/dictionary/common-words`)
+    else{
+      //pass
+    }
+  }, 1000);
 }
