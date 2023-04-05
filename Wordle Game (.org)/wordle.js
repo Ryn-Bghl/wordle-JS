@@ -174,6 +174,7 @@ function Cword() {
       }
     }
   }, 1500)
+  document.querySelector("button.button:nth-child(4)").blur() 
   setTimeout(() => {
     if(document.querySelector("button.button:nth-child(5)").textContent == "✔")
       window.open(`https://lotsofwords.com/${cltr.join("+")}/-${bltr.join("-")}/5-letters/dictionary/common-words`)
