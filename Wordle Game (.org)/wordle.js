@@ -156,27 +156,29 @@ btnDiv.appendChild(btn2);
 
 
 function Cword() {
-  start()
+  start();
   var cltr = [], bltr = [];
-  for (var i = 1; i <= 6; i++) { // number of line
-    for (var j = 1; j <= 5; j++) { // number of column 
-      var state = document.querySelector(`div.Row:nth-child(${i}) > div:nth-child(${j})`).attributes["class"].nodeValue.split(" ")[1]
-      var letter = document.querySelector(`div.Row:nth-child(${i}) > div:nth-child(${j})`).childNodes[0].textContent 
-      
-      if(state == "letter-correct" || state == "letter-elsewhere"){
-        cltr.push(letter)
-      } else if(state == "letter-absent"){
-        bltr.push(letter)
-      }else{
-        console.error('invalid state')
+  setTimeout(() => {
+    for (var i = 1; i <= 6; i++) { // number of line
+      for (var j = 1; j <= 5; j++) { // number of column 
+        var state = document.querySelector(`div.Row:nth-child(${i}) > div:nth-child(${j})`).attributes["class"].nodeValue.split(" ")[1]
+        var letter = document.querySelector(`div.Row:nth-child(${i}) > div:nth-child(${j})`).childNodes[0].textContent 
+
+        if(state == "letter-correct" || state == "letter-elsewhere"){
+          cltr.push(letter)
+        } else if(state == "letter-absent"){
+          bltr.push(letter)
+        }else{
+          console.error('invalid state')
+        }
       }
     }
-  }
+  }, 1500)
   setTimeout(() => {
     if(document.querySelector("button.button:nth-child(5)").textContent == "✔")
       window.open(`https://lotsofwords.com/${cltr.join("+")}/-${bltr.join("-")}/5-letters/dictionary/common-words`)
     else{
       //pass
     }
-  }, 1000);
+  }, 1500);
 }
